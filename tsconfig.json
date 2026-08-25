@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/WorkflowSection", "components/PricingSection", "components/PortfolioSection"  ],
   "exclude": ["node_modules"]
 }
