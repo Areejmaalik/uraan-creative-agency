@@ -11,7 +11,7 @@ import { PortfolioSection } from '@/components/PortfolioSection';
 import { WorkflowSection } from '@/components/WorkflowSection';
 import { PricingSection } from '@/components/PricingSection';
 import { FAQ } from '@/components/FAQ';
-import { UraanLogo } from '@/components/UraanLogo';
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
   const scrollToSection = (id: string) => {
@@ -61,24 +61,18 @@ export default function Home() {
 
         {/* 8. Agency Pricing Tiers */}
         <PricingSection
-          onSelectPlan={() => scrollToSection('contact')}
+          onSelectPlan={() => scrollToSection('pricing')}
         />
 
         {/* 9. FAQs */}
         <FAQ />
       </main>
 
-      {/* 10. Footer */}
-      <footer className="bg-[#031315] border-t border-teal-950 text-slate-300 py-12 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <UraanLogo size="sm" showSubtitle={true} />
-          </div>
-          <p className="text-xs text-slate-400 text-center sm:text-right">
-            © {new Date().getFullYear()} Uraan Creative Agency. Giving Wings to Your Brand. 100% Commercial Vector & IP Ownership.
-          </p>
-        </div>
-      </footer>
+      {/* 10. Complete Multi-Column Agency Footer with CTA Banner */}
+      <Footer
+        onScrollToSection={scrollToSection}
+        onOpenConsultation={() => scrollToSection('pricing')}
+      />
     </div>
   );
 }
