@@ -1,13 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 
-// Exactly matching your components folder
+// Components
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ClientsTicker } from '@/components/ClientsTicker';
-import { ClientStories } from '@/components/ClientStories';
 import { ServicesSection } from '@/components/ServicesSection';
+import { ThreeDShowcase } from '@/components/ThreeDShowcase';
 import { PortfolioSection } from '@/components/PortfolioSection';
+import { ClientStories } from '@/components/ClientStories';
 import { WorkflowSection } from '@/components/WorkflowSection';
 import { PricingSection } from '@/components/PricingSection';
 import { FAQ } from '@/components/FAQ';
@@ -47,28 +48,34 @@ export default function Home() {
           onOpenConsultation={() => scrollToSection('pricing')}
         />
 
-        {/* 5. Selected Works Portfolio */}
+        {/* 5. Real-Time 3D Spatial Art Studio */}
+        <ThreeDShowcase
+          onOpenConsultation={() => scrollToSection('pricing')}
+          onScrollToSection={scrollToSection}
+        />
+
+        {/* 6. Selected Works Portfolio */}
         <PortfolioSection />
 
-        {/* 6. 50+ Client Stories & Testimonials */}
+        {/* 7. 50+ Client Stories */}
         <ClientStories />
 
-        {/* 7. Velocity Workflow */}
+        {/* 8. Velocity Workflow */}
         <WorkflowSection
           onOpenConsultation={() => scrollToSection('pricing')}
           onScrollToSection={scrollToSection}
         />
 
-        {/* 8. Agency Pricing Tiers */}
+        {/* 9. Agency Pricing Tiers */}
         <PricingSection
           onSelectPlan={() => scrollToSection('pricing')}
         />
 
-        {/* 9. FAQs */}
+        {/* 10. FAQs */}
         <FAQ />
       </main>
 
-      {/* 10. Complete Multi-Column Agency Footer with CTA Banner */}
+      {/* 11. Multi-Column Agency Footer */}
       <Footer
         onScrollToSection={scrollToSection}
         onOpenConsultation={() => scrollToSection('pricing')}
